@@ -2,8 +2,10 @@
 
 ## Stack
 - Next.js 15, App Router, TypeScript, Tailwind CSS
-- Deployed to Coolify on Server 1 (51.222.138.8) as a static site via nginx:alpine
-- GitHub: ScottAuten/garagedoorrepairscoralsprings
+- Deployed to Coolify on Server 1 (51.222.138.8)
+- Coolify App UUID: nowsoogk4gwk04oso8kscow0
+- start_command: `npx serve@latest /app/out -l 3000` (serves static export on port 3000)
+- GitHub: ScottAuten/garagedoorrepairscoralsprings (public repo)
 
 ## CRITICAL: Static Export Configuration
 
