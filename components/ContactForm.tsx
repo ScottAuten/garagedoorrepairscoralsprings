@@ -88,7 +88,7 @@ export default function ContactForm() {
                 <p className="font-bold text-navy mb-3">Services</p>
                 <div className="flex flex-wrap gap-2">
                   {SERVICES.map((s) => (
-                    <Link key={s.slug} href={`/services/${s.slug}`}
+                    <Link key={s.slug} href={s.url}
                       className="text-xs bg-gray-100 hover:bg-orange-100 text-gray-700 hover:text-navy px-3 py-1.5 rounded-full transition-colors">
                       {s.name}
                     </Link>

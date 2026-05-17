@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   title: 'New Garage Door Installation Coral Springs FL | (754) 318-5005 Free Estimate',
   description:
     'New garage door installation in Coral Springs, FL. Hurricane-rated, HOA-compliant options. All major brands. Free estimate, same-week installation. Call (754) 318-5005.',
-  alternates: { canonical: 'https://garagedoorrepairscoralsprings.us/services/new-installation' },
+  alternates: { canonical: 'https://garagedoorrepairscoralsprings.us/garage-door-installation-coral-springs' },
 }
 
 const SERVICE_SCHEMA = {
@@ -232,7 +232,7 @@ export default function NewInstallationPage() {
           <h2 className="text-2xl font-bold text-navy mb-4">Serving All of Coral Springs Including:</h2>
           <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
             {NEIGHBORHOODS.map((n) => (
-              <Link key={n.slug} href={`/areas/${n.slug}`}
+              <Link key={n.slug} href={n.url}
                 className="bg-gray-50 border border-gray-200 rounded-lg px-4 py-3 text-center hover:border-orange-400 hover:bg-orange-50 transition-colors">
                 <p className="font-semibold text-navy text-sm">{n.name}</p>
                 <p className="text-gray-500 text-xs mt-0.5">Coral Springs, FL</p>

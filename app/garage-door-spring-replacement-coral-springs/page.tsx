@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   title: 'Garage Door Spring Replacement Coral Springs FL | Same-Day (754) 318-5005',
   description:
     'Expert garage door spring replacement in Coral Springs, FL. Torsion & extension springs replaced same day. Licensed technicians, upfront pricing. Call (754) 318-5005.',
-  alternates: { canonical: 'https://garagedoorrepairscoralsprings.us/services/spring-replacement' },
+  alternates: { canonical: 'https://garagedoorrepairscoralsprings.us/garage-door-spring-replacement-coral-springs' },
 }
 
 const SERVICE_SCHEMA = {
@@ -367,7 +367,7 @@ export default function SpringReplacementPage() {
             {NEIGHBORHOODS.map((n) => (
               <Link
                 key={n.slug}
-                href={`/areas/${n.slug}`}
+                href={n.url}
                 className="bg-gray-50 border border-gray-200 rounded-lg px-4 py-3 text-center hover:border-orange-400 hover:bg-orange-50 transition-colors">
                 <p className="font-semibold text-navy text-sm">{n.name}</p>
                 <p className="text-gray-500 text-xs mt-0.5">Coral Springs, FL</p>

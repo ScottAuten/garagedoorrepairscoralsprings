@@ -31,7 +31,7 @@ export default function Footer() {
             <ul className="space-y-1.5">
               {SERVICES.map((s) => (
                 <li key={s.slug}>
-                  <Link href={`/services/${s.slug}`}
+                  <Link href={s.url}
                     className="text-gray-300 hover:text-orange-400 text-sm transition-colors">
                     {s.name}
                   </Link>
@@ -51,7 +51,7 @@ export default function Footer() {
             <ul className="space-y-1.5">
               {NEIGHBORHOODS.map((n) => (
                 <li key={n.slug}>
-                  <Link href={`/areas/${n.slug}`}
+                  <Link href={n.url}
                     className="text-gray-300 hover:text-orange-400 text-sm transition-colors">
                     {n.name}
                   </Link>

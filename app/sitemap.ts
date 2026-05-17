@@ -1,4 +1,5 @@
 import type { MetadataRoute } from 'next'
+import { SERVICES, NEIGHBORHOODS } from '@/lib/constants'
 
 export const dynamic = 'force-static'
 
@@ -17,26 +18,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/terms',
   ]
 
-  const services = [
-    'spring-replacement',
-    'opener-repair',
-    'off-track-repair',
-    'cable-replacement',
-    'sensor-repair',
-    'roller-replacement',
-    'emergency-repair',
-    'new-installation',
-  ]
-
-  const areas = [
-    'wyndham-lakes',
-    'ridgewood',
-    'eagle-trace',
-    'turtle-run',
-    'maplewood',
-    'heron-bay',
-  ]
-
   return [
     ...staticPages.map((path) => ({
       url: `${BASE}${path}`,
@@ -44,14 +25,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'monthly' as const,
       priority: path === '' ? 1.0 : 0.8,
     })),
-    ...services.map((slug) => ({
-      url: `${BASE}/services/${slug}`,
+    ...SERVICES.map((s) => ({
+      url: `${BASE}${s.url}`,
       lastModified: now,
       changeFrequency: 'monthly' as const,
       priority: 0.9,
     })),
-    ...areas.map((slug) => ({
-      url: `${BASE}/areas/${slug}`,
+    ...NEIGHBORHOODS.map((n) => ({
+      url: `${BASE}${n.url}`,
       lastModified: now,
       changeFrequency: 'monthly' as const,
       priority: 0.9,

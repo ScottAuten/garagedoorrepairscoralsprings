@@ -1,7 +1,9 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import CTASection from '@/components/CTASection'
-import { SITE } from '@/lib/constants'
+import { SITE, SERVICES } from '@/lib/constants'
+
+const serviceUrlMap = Object.fromEntries(SERVICES.map((s) => [s.slug, s.url]))
 
 export const metadata: Metadata = {
   title: 'Garage Door Services Coral Springs FL | All Repairs & Installation | (754) 318-5005',
@@ -147,7 +149,7 @@ export default function ServicesPage() {
                     ))}
                   </ul>
                   <Link
-                    href={`/services/${s.slug}`}
+                    href={serviceUrlMap[s.slug]}
                     className="inline-block bg-navy hover:bg-blue-900 text-white font-semibold py-2 px-5 rounded-lg text-sm transition-colors">
                     Learn More →
                   </Link>

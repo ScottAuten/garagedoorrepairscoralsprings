@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   title: 'Garage Door Repair Turtle Run Coral Springs FL | (754) 318-5005',
   description:
     'Garage door repair in Turtle Run, Coral Springs FL. Gated community service — springs, openers, cables & more. Same-day, HOA-compliant, licensed. Call (754) 318-5005.',
-  alternates: { canonical: 'https://garagedoorrepairscoralsprings.us/areas/turtle-run' },
+  alternates: { canonical: 'https://garagedoorrepairscoralsprings.us/turtle-run-garage-door-repair' },
 }
 
 const FAQ_SCHEMA = {
@@ -134,7 +134,7 @@ export default function TurtleRunPage() {
           <h2 className="text-2xl font-bold text-navy mb-4">Services Available in Turtle Run</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
             {SERVICES.map((s) => (
-              <Link key={s.slug} href={`/services/${s.slug}`}
+              <Link key={s.slug} href={s.url}
                 className="flex items-center gap-3 bg-gray-50 border border-gray-200 rounded-lg px-4 py-3 hover:border-orange-400 hover:bg-orange-50 transition-colors">
                 <span className="text-2xl">{s.icon}</span>
                 <div>
@@ -148,7 +148,7 @@ export default function TurtleRunPage() {
           <h2 className="text-2xl font-bold text-navy mb-4">We Also Serve These Coral Springs Communities:</h2>
           <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3">
             {otherNeighborhoods.map((n) => (
-              <Link key={n.slug} href={`/areas/${n.slug}`}
+              <Link key={n.slug} href={n.url}
                 className="bg-gray-50 border border-gray-200 rounded-lg px-3 py-3 text-center hover:border-orange-400 hover:bg-orange-50 transition-colors">
                 <p className="font-semibold text-navy text-sm">{n.name}</p>
               </Link>

@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   title: 'Garage Door Repair Wyndham Lakes Coral Springs FL | (754) 318-5005',
   description:
     'Garage door repair in Wyndham Lakes, Coral Springs FL. Springs, openers, cables & more. Same-day service, HOA-compliant work. Licensed & insured. Call (754) 318-5005.',
-  alternates: { canonical: 'https://garagedoorrepairscoralsprings.us/areas/wyndham-lakes' },
+  alternates: { canonical: 'https://garagedoorrepairscoralsprings.us/wyndham-lakes-garage-door-repair' },
 }
 
 const FAQ_SCHEMA = {
@@ -135,7 +135,7 @@ export default function WyndhamLakesPage() {
           <h2 className="text-2xl font-bold text-navy mb-4">Services Available in Wyndham Lakes</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
             {SERVICES.map((s) => (
-              <Link key={s.slug} href={`/services/${s.slug}`}
+              <Link key={s.slug} href={s.url}
                 className="flex items-center gap-3 bg-gray-50 border border-gray-200 rounded-lg px-4 py-3 hover:border-orange-400 hover:bg-orange-50 transition-colors">
                 <span className="text-2xl">{s.icon}</span>
                 <div>
@@ -149,7 +149,7 @@ export default function WyndhamLakesPage() {
           <h2 className="text-2xl font-bold text-navy mb-4">We Also Serve These Coral Springs Communities:</h2>
           <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3">
             {otherNeighborhoods.map((n) => (
-              <Link key={n.slug} href={`/areas/${n.slug}`}
+              <Link key={n.slug} href={n.url}
                 className="bg-gray-50 border border-gray-200 rounded-lg px-3 py-3 text-center hover:border-orange-400 hover:bg-orange-50 transition-colors">
                 <p className="font-semibold text-navy text-sm">{n.name}</p>
               </Link>

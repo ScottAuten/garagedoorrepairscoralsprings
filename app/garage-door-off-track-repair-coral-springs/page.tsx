@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   title: 'Garage Door Off Track Repair Coral Springs FL | Same-Day (754) 318-5005',
   description:
     'Garage door jumped off track in Coral Springs? Emergency repair available same day. Licensed technicians realign tracks, replace rollers. Call (754) 318-5005 now.',
-  alternates: { canonical: 'https://garagedoorrepairscoralsprings.us/services/off-track-repair' },
+  alternates: { canonical: 'https://garagedoorrepairscoralsprings.us/garage-door-off-track-repair-coral-springs' },
 }
 
 const SERVICE_SCHEMA = {
@@ -206,7 +206,7 @@ export default function OffTrackRepairPage() {
           <h2 className="text-2xl font-bold text-navy mb-4">Serving All of Coral Springs Including:</h2>
           <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
             {NEIGHBORHOODS.map((n) => (
-              <Link key={n.slug} href={`/areas/${n.slug}`}
+              <Link key={n.slug} href={n.url}
                 className="bg-gray-50 border border-gray-200 rounded-lg px-4 py-3 text-center hover:border-orange-400 hover:bg-orange-50 transition-colors">
                 <p className="font-semibold text-navy text-sm">{n.name}</p>
                 <p className="text-gray-500 text-xs mt-0.5">Coral Springs, FL</p>

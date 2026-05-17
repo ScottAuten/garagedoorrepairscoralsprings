@@ -212,7 +212,7 @@ export default function HomePage() {
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
             {SERVICES.map((s) => (
-              <Link key={s.slug} href={`/services/${s.slug}`}
+              <Link key={s.slug} href={s.url}
                 className="bg-white rounded-xl p-5 shadow-sm hover:shadow-md border border-gray-100 hover:border-orange-200 transition-all group flex sm:flex-col items-start sm:items-center gap-3 sm:gap-0 sm:text-center">
                 <div className="text-3xl sm:mb-2 flex-shrink-0">{s.icon}</div>
                 <div>
@@ -325,7 +325,7 @@ export default function HomePage() {
           </p>
           <div className="grid grid-cols-2 md:grid-cols-3 gap-5">
             {NEIGHBORHOODS.map((n) => (
-              <Link key={n.slug} href={`/areas/${n.slug}`}
+              <Link key={n.slug} href={n.url}
                 className="group relative h-44 rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-shadow">
                 <Image
                   src={n.image}

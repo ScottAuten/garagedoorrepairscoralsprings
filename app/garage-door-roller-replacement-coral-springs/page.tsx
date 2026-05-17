@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   title: 'Garage Door Roller Replacement Coral Springs FL | Quiet Nylon (754) 318-5005',
   description:
     'Noisy, rough garage door in Coral Springs? Roller replacement with quiet nylon rollers — same-day service. Licensed technicians, upfront pricing. Call (754) 318-5005.',
-  alternates: { canonical: 'https://garagedoorrepairscoralsprings.us/services/roller-replacement' },
+  alternates: { canonical: 'https://garagedoorrepairscoralsprings.us/garage-door-roller-replacement-coral-springs' },
 }
 
 const SERVICE_SCHEMA = {
@@ -211,7 +211,7 @@ export default function RollerReplacementPage() {
           <h2 className="text-2xl font-bold text-navy mb-4">Serving All of Coral Springs Including:</h2>
           <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
             {NEIGHBORHOODS.map((n) => (
-              <Link key={n.slug} href={`/areas/${n.slug}`}
+              <Link key={n.slug} href={n.url}
                 className="bg-gray-50 border border-gray-200 rounded-lg px-4 py-3 text-center hover:border-orange-400 hover:bg-orange-50 transition-colors">
                 <p className="font-semibold text-navy text-sm">{n.name}</p>
                 <p className="text-gray-500 text-xs mt-0.5">Coral Springs, FL</p>

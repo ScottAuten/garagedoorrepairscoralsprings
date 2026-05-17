@@ -55,7 +55,7 @@ export default function AreasPage() {
             {NEIGHBORHOODS.map((n) => (
               <Link
                 key={n.slug}
-                href={`/areas/${n.slug}`}
+                href={n.url}
                 className="group bg-white border border-gray-200 rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow">
                 <div className="relative h-44 bg-gray-100">
                   <Image

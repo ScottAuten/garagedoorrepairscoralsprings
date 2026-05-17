@@ -40,7 +40,7 @@ export default function Header() {
               {servicesOpen && (
                 <div className="absolute left-0 top-full bg-white shadow-xl rounded-lg py-2 w-56 border border-gray-100 z-50">
                   {SERVICES.map((s) => (
-                    <Link key={s.slug} href={`/services/${s.slug}`}
+                    <Link key={s.slug} href={s.url}
                       className="block px-4 py-2 text-sm text-gray-700 hover:bg-navy hover:text-white transition-colors">
                       {s.icon} {s.name}
                     </Link>
@@ -62,7 +62,7 @@ export default function Header() {
               {areasOpen && (
                 <div className="absolute left-0 top-full bg-white shadow-xl rounded-lg py-2 w-52 border border-gray-100 z-50">
                   {NEIGHBORHOODS.map((n) => (
-                    <Link key={n.slug} href={`/areas/${n.slug}`}
+                    <Link key={n.slug} href={n.url}
                       className="block px-4 py-2 text-sm text-gray-700 hover:bg-navy hover:text-white transition-colors">
                       {n.name}
                     </Link>
@@ -110,7 +110,7 @@ export default function Header() {
             <div className="space-y-1">
               <p className="text-xs font-bold text-gray-400 uppercase tracking-wide px-2 pt-2">Services</p>
               {SERVICES.map((s) => (
-                <Link key={s.slug} href={`/services/${s.slug}`}
+                <Link key={s.slug} href={s.url}
                   onClick={() => setMobileOpen(false)}
                   className="block px-2 py-1.5 text-sm text-gray-700 hover:text-navy">
                   {s.name}
@@ -122,7 +122,7 @@ export default function Header() {
               </Link>
               <p className="text-xs font-bold text-gray-400 uppercase tracking-wide px-2 pt-3">Areas</p>
               {NEIGHBORHOODS.map((n) => (
-                <Link key={n.slug} href={`/areas/${n.slug}`}
+                <Link key={n.slug} href={n.url}
                   onClick={() => setMobileOpen(false)}
                   className="block px-2 py-1.5 text-sm text-gray-700 hover:text-navy">
                   {n.name}

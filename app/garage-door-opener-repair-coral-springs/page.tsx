@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   title: 'Garage Door Opener Repair Coral Springs FL | All Brands | (754) 318-5005',
   description:
     'Garage door opener repair in Coral Springs, FL. LiftMaster, Chamberlain, Genie & all brands. Logic board, motor, remote repair. Same-day service. Call (754) 318-5005.',
-  alternates: { canonical: 'https://garagedoorrepairscoralsprings.us/services/opener-repair' },
+  alternates: { canonical: 'https://garagedoorrepairscoralsprings.us/garage-door-opener-repair-coral-springs' },
 }
 
 const SERVICE_SCHEMA = {
@@ -215,7 +215,7 @@ export default function OpenerRepairPage() {
           <h2 className="text-2xl font-bold text-navy mb-4">Serving All of Coral Springs Including:</h2>
           <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
             {NEIGHBORHOODS.map((n) => (
-              <Link key={n.slug} href={`/areas/${n.slug}`}
+              <Link key={n.slug} href={n.url}
                 className="bg-gray-50 border border-gray-200 rounded-lg px-4 py-3 text-center hover:border-orange-400 hover:bg-orange-50 transition-colors">
                 <p className="font-semibold text-navy text-sm">{n.name}</p>
                 <p className="text-gray-500 text-xs mt-0.5">Coral Springs, FL</p>
